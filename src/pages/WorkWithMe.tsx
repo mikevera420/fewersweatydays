@@ -21,7 +21,7 @@ const priceComparisons = [
 
 export default function WorkWithMe() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const healthieUrl = 'https://secure.gethealthie.com/appointments/embed_appt?dietitian_id=3464974&require_offering=true&offering_id=229095&hide_package_images=false&primary_color=000000';
+  const healthieUrl = 'https://secure.gethealthie.com/appointments/embed_appt?dietitian_id=3464974&require_offering=true&offering_id=245235&hide_package_images=false&primary_color=000000';
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
