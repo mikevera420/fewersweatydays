@@ -1,7 +1,7 @@
 ---
 title: "From Changing My Shirt 3 Times a Day to Confidently Shaking Hands"
 date: "2026-03-10"
-category: "Personal"
+category: "Personal Stories"
 excerpt: "This is the story I don't usually tell. The one about the decade I spent engineering my entire life around a condition nobody could see."
 slug: "from-changing-shirts-to-shaking-hands"
 tags: ["personal story", "hero story", "lifestyle change"]

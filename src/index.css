@@ -718,13 +718,17 @@ html.lenis, html.lenis body {
   transition: opacity 0.3s;
 }
 .post-card:hover::before { opacity: 1; }
-.post-card[data-category="Drug Harms"]::before { background: var(--color-brand-400); }
+/* Category accent bars — colors map to reader-intent categories */
+.post-card[data-category="Start Here"]::before { background: var(--color-brand-500); }
+.post-card[data-category="Treatment & Medications"]::before { background: var(--color-brand-400); }
 .post-card[data-category="Nervous System"]::before { background: var(--color-calm-400); }
-.post-card[data-category="Psychology"]::before { background: #9b8ce8; }
-.post-card[data-category="Personal"]::before { background: var(--color-brand-300); }
-.post-card[data-category="Adjacent Conditions"]::before { background: #64b5f6; }
-.post-card[data-category="Lifestyle"]::before { background: #81c784; }
-.post-card[data-category="Integrative"]::before { background: #ba68c8; }
+.post-card[data-category="Nutrition & Gut"]::before { background: #e6b54a; }
+.post-card[data-category="Root Causes"]::before { background: #81c784; }
+.post-card[data-category="Lifestyle & Habits"]::before { background: #7cc9c0; }
+.post-card[data-category="Mindset & Identity"]::before { background: #9b8ce8; }
+.post-card[data-category="Daily Life"]::before { background: #64b5f6; }
+.post-card[data-category="Personal Stories"]::before { background: var(--color-brand-300); }
+.post-card[data-category="Paths Forward"]::before { background: #ba68c8; }
 .post-card:hover {
   border-color: hsla(168, 70%, 52%, 0.25);
   box-shadow: 0 12px 40px hsla(168, 70%, 52%, 0.12);
@@ -1755,4 +1759,84 @@ html.lenis, html.lenis body {
 }
 .legal-prose a:hover {
   color: var(--color-brand-700);
+}
+
+/* ═══════════════════════════════════════════════════════
+   PILLAR BLOCK (Series TOC at the bottom of series articles)
+   ═══════════════════════════════════════════════════════ */
+.pillar-block-wrapper {
+  max-width: 800px;
+  margin: 3rem auto 2rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+}
+
+.pillar-block-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pillar-block-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.pillar-block-tagline {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pillar-block-wrapper .pillar-grid {
+  margin-top: 1.5rem;
+}
+
+.pillar-tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pillar-tile-wrapper {
+  display: block;
+  /* Non-clickable wrapper for current & unpublished tiles */
+}
+
+.pillar-tile-wrapper .pillar-tile:not(.active) {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.pillar-tile-wrapper .pillar-tile:not(.active):hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.pillar-tile-current {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-calm-600);
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.pillar-tile-status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-faint);
+  margin-top: auto;
+  padding-top: 0.25rem;
 }

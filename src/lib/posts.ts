@@ -8,6 +8,8 @@ export interface BlogPost {
   tags: string[];
   image?: string;
   content: string;
+  seriesSlug?: string;
+  seriesPosition?: number;
 }
 
 const modules = import.meta.glob('/content/posts/*.md', {
@@ -34,6 +36,8 @@ function parseFrontmatter(raw: string): { meta: Omit<BlogPost, 'content'>; conte
     return m[1].split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
   };
 
+  const seriesPositionRaw = get('seriesPosition');
+
   return {
     meta: {
       slug: get('slug'),
@@ -44,6 +48,8 @@ function parseFrontmatter(raw: string): { meta: Omit<BlogPost, 'content'>; conte
       readTime: get('readTime'),
       tags: getArray('tags'),
       image: get('image') || undefined,
+      seriesSlug: get('seriesSlug') || undefined,
+      seriesPosition: seriesPositionRaw !== '' ? parseInt(seriesPositionRaw, 10) : undefined,
     },
     content,
   };

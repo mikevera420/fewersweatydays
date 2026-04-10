@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import AuthorCard from '../components/blog/AuthorCard';
+import PillarBlock from '../components/blog/PillarBlock';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { getPostBySlug } from '../lib/posts';
 import { renderMarkdown } from '../lib/markdown';
@@ -40,6 +41,14 @@ export default function BlogPost() {
       <section className="content-section" style={{ paddingTop: '2rem' }}>
         <div className="section-inner blog-post-body">
           <div className="prose-fsd" dangerouslySetInnerHTML={{ __html: html }} />
+          {post.seriesSlug && post.seriesPosition !== undefined && (
+            <ScrollReveal>
+              <PillarBlock
+                seriesSlug={post.seriesSlug}
+                currentPosition={post.seriesPosition}
+              />
+            </ScrollReveal>
+          )}
           <ScrollReveal>
             <AuthorCard />
           </ScrollReveal>
