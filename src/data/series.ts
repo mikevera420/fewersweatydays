@@ -47,9 +47,11 @@ export const seriesRegistry: Record<string, Series> = {
     pillars: [
       {
         position: 0,
-        slug: '',
+        slug: '9-things-about-hyperhidrosis-nobodys-investigating',
         workingTitle: "9 Things About Hyperhidrosis Nobody's Investigating",
-        published: false,
+        finalTitle: "9 Things About Hyperhidrosis Nobody's Investigating (But Should Be)",
+        published: true,
+        publishDate: '2026-05-01',
         category: 'Start Here',
         shortLabel: 'The Gateway',
       },
