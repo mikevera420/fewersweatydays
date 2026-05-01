@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import AuthorCard from '../components/blog/AuthorCard';
 import PillarBlock from '../components/blog/PillarBlock';
+import PostCTA from '../components/blog/PostCTA';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { getPostBySlug } from '../lib/posts';
 import { renderMarkdown } from '../lib/markdown';
@@ -49,6 +50,9 @@ export default function BlogPost() {
               />
             </ScrollReveal>
           )}
+          <ScrollReveal>
+            <PostCTA />
+          </ScrollReveal>
           <ScrollReveal>
             <AuthorCard />
           </ScrollReveal>
