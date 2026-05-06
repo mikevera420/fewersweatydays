@@ -5,7 +5,9 @@
 
 async function saveToSupabase(payload) {
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // Anon key is sufficient — the contacts table has an RLS policy
+  // ("Allow anonymous lead capture") that grants INSERT to the anon role.
+  const key = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
     console.warn('Supabase env vars missing; skipping CRM save');
     return;
