@@ -37,12 +37,16 @@ export default async function handler(req, res) {
 
   const { first_name, email } = req.body || {};
 
-  if (!email || !first_name) {
-    return res.status(400).json({ error: 'Missing required fields' });
+  if (!email) {
+    return res.status(400).json({ error: 'Please provide an email address.' });
   }
 
-  const sanitizedFirstName = String(first_name).trim().slice(0, 100);
+  const sanitizedFirstName = first_name ? String(first_name).trim().slice(0, 100) : '';
   const sanitizedEmail = String(email).trim().toLowerCase();
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(sanitizedEmail)) {
+    return res.status(400).json({ error: 'Please provide a valid email address.' });
+  }
 
   if (!process.env.MAILCHIMP_API_KEY) {
     console.error('MAILCHIMP_API_KEY missing');
