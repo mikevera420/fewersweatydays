@@ -5,6 +5,7 @@ import { ArrowDown } from 'lucide-react';
 import HeroCanvas from '../components/canvas/HeroCanvas';
 import PostCard from '../components/blog/PostCard';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import NewsletterForm from '../components/coaching/NewsletterForm';
 import { getAllPosts } from '../lib/posts';
 
 export default function Home() {
@@ -82,6 +83,9 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Newsletter / Lead Magnet */}
+      <NewsletterForm />
 
       {/* Coaching Mention */}
       <section className="coaching-banner">
