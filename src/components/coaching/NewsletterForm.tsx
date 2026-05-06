@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import ScrollReveal from '../ui/ScrollReveal';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
