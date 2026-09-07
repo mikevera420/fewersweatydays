@@ -2,16 +2,16 @@
 title: "Iontophoresis: Who It Helps, Who It Drains"
 date: "2026-09-06"
 category: "Treatment Reality"
-excerpt: "Iontophoresis can dry palms and soles — if you can live with the evening trays. Who the grind fits, who it drains, and why quitting is not failure."
+excerpt: "Iontophoresis can dry palms and soles if you can live with the evening trays. Who the grind fits, who it drains, and why quitting is not failure."
 slug: "iontophoresis-who-it-helps"
 tags: ["hyperhidrosis", "iontophoresis", "palmar", "treatment"]
 readTime: "5 min"
 image: "/images/blog/iontophoresis-who-it-helps-hero.jpg"
 ---
 
-Wednesday night. The trays are already filled. You sit down, put your hands in the water, set a phone timer, and feel that familiar tingle climb into a mild sting. Somewhere in the house someone asks if you are free in twenty minutes. You are not. The trays own the evening.
+Wednesday night. The trays are already filled. You sit down, put your hands in the water, set a phone timer, and feel that familiar tingle climb into a mild sting. Somewhere in the house someone asks if you are free in twenty minutes. You are not. That block of the night is already taken.
 
-## The night the trays own the evening
+## What a tray night actually costs
 
 This is maintenance, not a one-off experiment. You have already done the early weeks of sitting here several times a week. Tonight is the quieter version: keep the dryness from slipping, or watch wet palms come back after a stretch of skipped sessions<sup><a class="cite-ref" href="#src-1">[1]</a></sup>.
 
@@ -21,7 +21,7 @@ Induction often looks like several sessions a week for about twenty to thirty mi
 
 That is the calendar tax. The phone timer is not optional decoration. It is the whole treatment sitting in your kitchen while dinner waits.
 
-Some nights the sting is easy to ignore. Some nights you watch the clock and bargain with yourself about cutting the session short. Either way, the evening has already been claimed. That is the part brochure language skips.
+Some nights the sting is easy to ignore. Some nights you watch the clock and bargain with yourself about cutting the session short. Either way, that block of the night is gone. That is the part brochure language skips.
 
 ## Who the grind actually fits
 
@@ -50,5 +50,5 @@ From lived coaching judgment, the honest split is simple. Keep the trays if palm
 The trays either fit your life or they drain it. Naming that early is the useful part. You can respect a tool and still decide it belongs to someone else's week, not yours.
 
 <strong>Sources</strong><br/>
-<a id="src-1"></a>1. Nawrocki & Cha, 2019 — <a href="https://pubmed.ncbi.nlm.nih.gov/30710603/">https://pubmed.ncbi.nlm.nih.gov/30710603/</a><br/>
-<a id="src-2"></a>2. Dagash et al., 2017 — <a href="https://pubmed.ncbi.nlm.nih.gov/27912978/">https://pubmed.ncbi.nlm.nih.gov/27912978/</a><br/>
+<a id="src-1"></a>1. Nawrocki & Cha, 2019: <a href="https://pubmed.ncbi.nlm.nih.gov/30710603/">https://pubmed.ncbi.nlm.nih.gov/30710603/</a><br/>
+<a id="src-2"></a>2. Dagash et al., 2017: <a href="https://pubmed.ncbi.nlm.nih.gov/27912978/">https://pubmed.ncbi.nlm.nih.gov/27912978/</a><br/>
