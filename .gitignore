@@ -25,3 +25,4 @@ dist-ssr
 
 # Environment variables (defense-in-depth; *.local already covers .env.local)
 .env
+.vercel

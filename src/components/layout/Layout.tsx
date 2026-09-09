@@ -3,6 +3,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import CustomCursor from '../ui/CustomCursor';
 import ScrollProgress from '../ui/ScrollProgress';
+import AnalyticsConsent, { SHOW_ANALYTICS_CHOICES_EVENT } from '../ui/AnalyticsConsent';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -69,6 +70,13 @@ export default function Layout() {
               <h4>Legal</h4>
               <Link to="/privacy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>
+              <button
+                type="button"
+                className="site-footer-privacy-button"
+                onClick={() => window.dispatchEvent(new Event(SHOW_ANALYTICS_CHOICES_EVENT))}
+              >
+                Analytics choices
+              </button>
             </div>
           </div>
           <div className="site-footer-bottom">
@@ -77,6 +85,8 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+
+      <AnalyticsConsent />
     </>
   );
 }

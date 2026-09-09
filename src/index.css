@@ -1073,6 +1073,18 @@ html.lenis, html.lenis body {
 }
 .site-footer-col a:hover { color: #fff; }
 .site-footer-col a:hover::after { width: 100%; }
+.site-footer-privacy-button {
+  display: block;
+  padding: 0.3rem 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.site-footer-privacy-button:hover { color: #fff; }
 .site-footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 2rem;
@@ -1093,6 +1105,83 @@ html.lenis, html.lenis body {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.05em;
+}
+
+/* Analytics consent */
+.analytics-consent {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 100000;
+  width: min(680px, calc(100% - 32px));
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: #1a1612;
+  color: #fff;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+.analytics-consent-copy h2 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.analytics-consent-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.analytics-consent-copy a {
+  color: #f6b87c;
+  text-underline-offset: 2px;
+}
+.analytics-consent-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.analytics-consent-actions button {
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.analytics-consent-decline {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: transparent;
+  color: #fff;
+}
+.analytics-consent-allow {
+  border: 1px solid var(--color-brand-400);
+  background: var(--color-brand-500);
+  color: #fff;
+}
+.analytics-consent-actions button:focus-visible,
+.site-footer-privacy-button:focus-visible {
+  outline: 2px solid var(--color-brand-300);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .analytics-consent {
+    bottom: 12px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .analytics-consent-actions {
+    justify-content: stretch;
+  }
+  .analytics-consent-actions button {
+    flex: 1;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════

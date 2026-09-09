@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import PillarGrid from '../components/coaching/PillarGrid';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import { trackBookingLinkClick } from '../lib/analytics';
 
 const faqs = [
   { q: 'Is this medical treatment?', a: 'No. I\'m a National Board Certified Health & Wellness Coach (NBC-HWC), not a physician. I provide lifestyle guidance and behavior change coaching. I do not diagnose, treat, or prescribe. If you need medical treatment for hyperhidrosis, I encourage you to work with a dermatologist — and I can help you make the most of that relationship.' },
@@ -148,7 +149,7 @@ export default function WorkWithMe() {
             <p className="cta-body">45 minutes with someone who actually understands what you're dealing with. That's all this is.</p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <a href={healthieUrl} target="_blank" rel="noopener noreferrer" className="cta-btn-primary cta-btn-large alive" data-cursor-hover>Book a $1 Strategy Session</a>
+            <a href={healthieUrl} target="_blank" rel="noopener noreferrer" className="cta-btn-primary cta-btn-large alive" data-cursor-hover onClick={() => trackBookingLinkClick('work_with_me_bottom')}>Book a $1 Strategy Session</a>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
             <p className="cta-fine-print">45 minutes. $1. No obligation. Just answers.</p>

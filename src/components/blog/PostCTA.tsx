@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { trackBookingLinkClick } from '../../lib/analytics';
 
 const HEALTHIE_URL =
   'https://secure.gethealthie.com/appointments/embed_appt?dietitian_id=3464974&require_offering=true&offering_id=245235&hide_package_images=false&primary_color=000000';
@@ -128,6 +129,7 @@ export default function PostCTA() {
           rel="noopener noreferrer"
           className="cta-btn-primary"
           data-cursor-hover
+          onClick={() => trackBookingLinkClick('blog_post_footer')}
         >
           Book a $1 Strategy Session
         </a>
