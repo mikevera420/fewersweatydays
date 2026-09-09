@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/call", "destination": "/work-with-me", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api).*)", "destination": "/index.html" }
   ],
