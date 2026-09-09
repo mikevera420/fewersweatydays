@@ -15,7 +15,7 @@ type GtagCommand = [string, ...unknown[]]
 
 declare global {
   interface Window {
-    dataLayer?: GtagCommand[]
+    dataLayer?: IArguments[]
     gtag?: (...args: GtagCommand) => void
     [key: `ga-disable-${string}`]: boolean | undefined
   }
@@ -35,9 +35,11 @@ function analyticsLocation() {
 
 function ensureGtag() {
   window.dataLayer = window.dataLayer ?? []
-  window.gtag = window.gtag ?? ((...args: GtagCommand) => {
-    window.dataLayer?.push(args)
-  })
+  // Match Google's bootstrap so gtag.js can process every queued command.
+  window.gtag = window.gtag ?? function gtag() {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments)
+  }
 }
 
 export function getAnalyticsConsent(): AnalyticsConsent {
