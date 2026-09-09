@@ -40,9 +40,17 @@ export default function WorkWithMe() {
               Built by someone who's been there.
             </p>
           </ScrollReveal>
-          <ScrollReveal delay={0.3}>
-            <a href={healthieUrl} target="_blank" rel="noopener noreferrer" className="cta-btn-primary" data-cursor-hover>Book a $1 Strategy Session</a>
-          </ScrollReveal>
+          <div className="booking-embed-wrap">
+            <iframe
+              src={`${healthieUrl}&hide_embed_title=false`}
+              title="Book a strategy session with Mike"
+              className="booking-embed"
+              style={{ width: '100%', height: '100%', minHeight: 600, border: 0 }}
+            />
+            <p className="cta-fine-print">
+              Booking Provided by <a href="https://gethealthie.com" target="_blank" rel="noopener noreferrer">Healthie</a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -145,18 +153,6 @@ export default function WorkWithMe() {
           <ScrollReveal delay={0.3}>
             <p className="cta-fine-print">45 minutes. $1. No obligation. Just answers.</p>
           </ScrollReveal>
-          <div className="booking-embed-wrap">
-            <iframe
-              src={`${healthieUrl}&hide_embed_title=false`}
-              title="Book a strategy session with Mike"
-              className="booking-embed"
-              style={{ width: '100%', height: '100%', minHeight: 600, border: 0 }}
-              loading="lazy"
-            />
-            <p className="cta-fine-print">
-              Booking Provided by <a href="https://gethealthie.com" target="_blank" rel="noopener noreferrer">Healthie</a>
-            </p>
-          </div>
         </div>
       </section>
     </div>
