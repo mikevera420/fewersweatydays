@@ -13,7 +13,7 @@ export default function Privacy() {
             <h1 className="legal-hero-title">Privacy Policy</h1>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="legal-hero-sub">Last updated: April 2026</p>
+            <p className="legal-hero-sub">Last updated: September 2026</p>
           </ScrollReveal>
         </div>
       </section>
@@ -38,9 +38,11 @@ export default function Privacy() {
               by Healthie's payment processor.
             </p>
             <p>
-              <strong>When you browse the site:</strong> We may use analytics tools to understand how
-              visitors use the site (which pages are visited, how long people stay, general geographic
-              region). This data is aggregated and does not personally identify you.
+              <strong>When you allow analytics:</strong> We use Google Analytics to understand which
+              pages people visit, how they arrived, general geographic region, device and browser type,
+              and interactions such as clicks to an external booking link. We do not send names,
+              email addresses, health details, or booking information. The embedded Healthie scheduler
+              is a separate service, and we do not use Google Analytics to inspect what you enter there.
             </p>
             <p>
               <strong>When you contact us:</strong> If you email us at hello@fewersweatydays.com, we
@@ -66,9 +68,10 @@ export default function Privacy() {
           <ScrollReveal>
             <h2>Cookies</h2>
             <p>
-              This website may use cookies for basic functionality and analytics. Cookies are small text
-              files stored on your device that help the site work properly. You can disable cookies in
-              your browser settings, though some features may not work as expected.
+              Google Analytics loads only after you select Allow analytics. It uses first-party cookies
+              to distinguish visits and sessions. Your choice is stored in your browser. You can reopen
+              Analytics choices from the site footer, decline analytics, clear cookies, or use Google's
+              browser opt-out tool. Declining analytics does not prevent you from using the site.
             </p>
           </ScrollReveal>
 
@@ -78,6 +81,17 @@ export default function Privacy() {
             <ul>
               <li><strong>Healthie</strong> — Session scheduling and client management (HIPAA-compliant)</li>
               <li><strong>Vercel</strong> — Website hosting</li>
+              <li>
+                <strong>Google Analytics</strong>: Consent-based website traffic and interaction
+                measurement. Learn{' '}
+                <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
+                  how Google uses information from sites that use its services
+                </a>{' '}
+                or install the{' '}
+                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
+                  Google Analytics opt-out browser add-on
+                </a>.
+              </li>
             </ul>
             <p>Each of these services has their own privacy policy governing how they handle your data.</p>
           </ScrollReveal>
