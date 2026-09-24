@@ -7,6 +7,7 @@ import PostCTA from '../components/blog/PostCTA';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { getPostBySlug } from '../lib/posts';
 import { renderMarkdown } from '../lib/markdown';
+import SeoHead from '../components/seo/SeoHead';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,6 +21,12 @@ export default function BlogPost() {
 
   return (
     <div>
+      <SeoHead
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        ogImage={post.image}
+      />
       <section className="blog-post-hero">
         <Link to="/blog" className="blog-back-link" data-cursor-hover>
           <ArrowLeft size={14} /> Back to Blog

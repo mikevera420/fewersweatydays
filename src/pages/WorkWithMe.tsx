@@ -3,6 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import PillarGrid from '../components/coaching/PillarGrid';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { trackBookingLinkClick } from '../lib/analytics';
+import SeoHead from '../components/seo/SeoHead';
 
 const faqs = [
   { q: 'Is this medical treatment?', a: 'No. I\'m a National Board Certified Health & Wellness Coach (NBC-HWC), not a physician. I provide lifestyle guidance and behavior change coaching. I do not diagnose, treat, or prescribe. If you need medical treatment for hyperhidrosis, I encourage you to work with a dermatologist — and I can help you make the most of that relationship.' },
@@ -28,6 +29,11 @@ export default function WorkWithMe() {
 
   return (
     <div className="page-work">
+      <SeoHead
+        title="Work With Me"
+        description="Book a coaching session for hyperhidrosis lifestyle change with Mike Vera, NBC-HWC."
+        path="/work-with-me"
+      />
       <section className="work-hero">
         <div className="section-inner">
           <ScrollReveal><div className="section-label">Work With Me</div></ScrollReveal>

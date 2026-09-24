@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import SeoHead from '../components/seo/SeoHead';
 
 export default function Privacy() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="page-legal">
+      <SeoHead title="Privacy Policy" description="Privacy policy for FewerSweatyDays." path="/privacy" />
       <section className="legal-hero">
         <div className="section-inner">
           <ScrollReveal><div className="section-label">Legal</div></ScrollReveal>
