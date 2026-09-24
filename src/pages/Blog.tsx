@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import PostCard from '../components/blog/PostCard';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { getAllPosts, getCategories } from '../lib/posts';
+import SeoHead from '../components/seo/SeoHead';
 
 export default function Blog() {
   const [active, setActive] = useState('All');
@@ -13,6 +14,11 @@ export default function Blog() {
 
   return (
     <div>
+      <SeoHead
+        title="Blog"
+        description="Research-backed writing for people who sweat through everything. Nervous system science, drug harms, psychology, and lifestyle strategies."
+        path="/blog"
+      />
       <section className="blog-hero">
         <div className="section-inner">
           <ScrollReveal><div className="section-label">Blog</div></ScrollReveal>

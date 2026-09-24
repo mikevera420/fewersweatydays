@@ -7,6 +7,7 @@ import PostCard from '../components/blog/PostCard';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import NewsletterForm from '../components/coaching/NewsletterForm';
 import { getAllPosts } from '../lib/posts';
+import SeoHead from '../components/seo/SeoHead';
 
 export default function Home() {
   const heroLabelRef = useRef<HTMLDivElement>(null);
@@ -28,6 +29,7 @@ export default function Home() {
 
   return (
     <div>
+      <SeoHead path="/" appendSiteName={false} />
       {/* Hero */}
       <section className="hero-section">
         <HeroCanvas />

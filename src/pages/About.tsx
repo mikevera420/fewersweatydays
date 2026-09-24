@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { GraduationCap, FlaskConical, Dumbbell, BadgeCheck } from 'lucide-react';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import SeoHead from '../components/seo/SeoHead';
 
 const timeline = [
   { label: 'Childhood', text: 'Hyperhidrosis starts. No explanation. No name for it. Just the reality of being the kid who sweats through everything.' },
@@ -110,6 +111,11 @@ export default function About() {
 
   return (
     <div className="page-about">
+      <SeoHead
+        title="About"
+        description="Mike Vera: psychology, cognition research, exercise science, and NBC-HWC coaching for people with hyperhidrosis."
+        path="/about"
+      />
       <section className="about-hero">
         <div className="section-inner">
           <ScrollReveal><div className="section-label">About</div></ScrollReveal>
