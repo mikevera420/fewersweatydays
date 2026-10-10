@@ -1,3 +1,11 @@
+# FewerSweatyDays
+
+## Prerendering (read before adding pages)
+
+`npm run build` prerenders every route to static HTML (`src/entry-server.tsx` + `scripts/prerender.mjs`), and Vercel serves those files directly with no SPA fallback. Blog posts in `content/posts/` are picked up automatically. **Any new non-blog page must also be added to `staticRoutes` in `src/entry-server.tsx`** (and to the `<Routes>` in `src/App.tsx`), or it will return 404 in production.
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
