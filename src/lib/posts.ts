@@ -25,9 +25,16 @@ function parseFrontmatter(raw: string): { meta: Omit<BlogPost, 'content'>; conte
   const frontmatter = match[1];
   const content = match[2].trim();
 
+  // Unquote a YAML scalar: 'single' ('' -> ') or "double" (\" and \\ escapes).
+  const unquote = (v: string): string => {
+    if (v.length >= 2 && v.startsWith("'") && v.endsWith("'")) return v.slice(1, -1).replace(/''/g, "'");
+    if (v.length >= 2 && v.startsWith('"') && v.endsWith('"')) return v.slice(1, -1).replace(/\\(["\\])/g, '$1');
+    return v;
+  };
+
   const get = (key: string): string => {
-    const m = frontmatter.match(new RegExp(`^${key}:\\s*"?(.*?)"?\\s*$`, 'm'));
-    return m ? m[1].replace(/^["']|["']$/g, '') : '';
+    const m = frontmatter.match(new RegExp(`^${key}:\\s*(.*?)\\s*$`, 'm'));
+    return m ? unquote(m[1]) : '';
   };
 
   const getArray = (key: string): string[] => {
