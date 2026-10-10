@@ -12,8 +12,17 @@ export const SHOW_ANALYTICS_CHOICES_EVENT = 'fsd:show-analytics-choices'
 
 export default function AnalyticsConsent() {
   const location = useLocation()
-  const [choice, setChoice] = useState<ConsentChoice>(() => getAnalyticsConsent())
-  const [isOpen, setIsOpen] = useState(() => choice === null)
+  // Start closed with no stored choice so the prerendered HTML and the first
+  // client render match; read localStorage after hydration.
+  const [choice, setChoice] = useState<ConsentChoice>(null)
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const stored = getAnalyticsConsent()
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from localStorage after hydration
+    setChoice(stored)
+    setIsOpen(stored === null)
+  }, [])
 
   useEffect(() => {
     const showChoices = () => setIsOpen(true)

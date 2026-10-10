@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App'
 import { Analytics } from '@vercel/analytics/react'
 
-createRoot(document.getElementById('root')!).render(
+const app = (
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
@@ -14,5 +14,15 @@ createRoot(document.getElementById('root')!).render(
         <Analytics />
       </BrowserRouter>
     </HelmetProvider>
-  </StrictMode>,
+  </StrictMode>
 )
+
+const root = document.getElementById('root')!
+
+// Pages are prerendered at build time (scripts/prerender.mjs); hydrate when
+// server HTML is present, fall back to a fresh render otherwise (e.g. `vite dev`).
+if (root.hasChildNodes()) {
+  hydrateRoot(root, app)
+} else {
+  createRoot(root).render(app)
+}
