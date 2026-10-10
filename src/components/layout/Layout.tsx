@@ -81,7 +81,7 @@ export default function Layout() {
           </div>
           <div className="site-footer-bottom">
             <p className="site-footer-disclaimer">Lifestyle guidance only. Not medical advice. FewerSweatyDays is part of the Avantia Health Optimization family.</p>
-            <p className="site-footer-copy">&copy; {new Date().getFullYear()} FewerSweatyDays. All rights reserved.</p>
+            <p className="site-footer-copy" suppressHydrationWarning>&copy; {new Date().getFullYear()} FewerSweatyDays. All rights reserved.</p>
           </div>
         </div>
       </footer>

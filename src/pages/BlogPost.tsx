@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import AuthorCard from '../components/blog/AuthorCard';
 import PillarBlock from '../components/blog/PillarBlock';
@@ -8,6 +8,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import { getPostBySlug } from '../lib/posts';
 import { renderMarkdown } from '../lib/markdown';
 import SeoHead from '../components/seo/SeoHead';
+import NotFound from './NotFound';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -15,7 +16,7 @@ export default function BlogPost() {
 
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <NotFound />;
 
   const html = renderMarkdown(post.content);
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
         </Link>
         <div className="blog-post-meta">
           <span className="post-card-tag">{post.category}</span>
-          <span className="blog-post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <span className="blog-post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</span>
           <span className="blog-post-read">{post.readTime}</span>
         </div>
         <h1 className="blog-post-title">{post.title}</h1>

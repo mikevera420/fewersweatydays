@@ -6,12 +6,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/((?!api(?:/|$)|sitemap\\.xml$|robots\\.txt$).*)",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/sitemap.xml",

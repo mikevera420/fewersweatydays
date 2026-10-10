@@ -11,6 +11,7 @@ import BlogPost from './pages/BlogPost'
 import WorkWithMe from './pages/WorkWithMe'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import NotFound from './pages/NotFound'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/work-with-me" element={<WorkWithMe />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   )
