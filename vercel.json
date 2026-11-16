@@ -4,6 +4,51 @@
       "source": "/call",
       "destination": "/work-with-me",
       "permanent": true
+    },
+    {
+      "source": "/blog/face-scalp-hh-shows-where-everyone-looksFor",
+      "destination": "/blog/face-scalp-hh-shows-where-everyone-looks",
+      "permanent": true
+    },
+    {
+      "source": "/blog/products-to-patterns-lifestyle-coachingIf",
+      "destination": "/blog/products-to-patterns-lifestyle-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/blog/background-math-managing-hhWhich",
+      "destination": "/blog/background-math-managing-hh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/night-sweats-vs-focal-hhWhen",
+      "destination": "/blog/night-sweats-vs-focal-hh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/plantar-hh-sock-change-loopIf",
+      "destination": "/blog/plantar-hh-sock-change-loop",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hh-presentations-meetings-fear-before-speakIf",
+      "destination": "/blog/hh-presentations-meetings-fear-before-speak",
+      "permanent": true
+    },
+    {
+      "source": "/work-with-me.That's",
+      "destination": "/work-with-me",
+      "permanent": true
+    },
+    {
+      "source": "/work-with-me.That%27s",
+      "destination": "/work-with-me",
+      "permanent": true
+    },
+    {
+      "source": "/work-with-me.That’s",
+      "destination": "/work-with-me",
+      "permanent": true
     }
   ],
   "headers": [
