@@ -46,7 +46,7 @@
       "permanent": true
     },
     {
-      "source": "/work-with-me.That’s",
+      "source": "/work-with-me.That%E2%80%99s",
       "destination": "/work-with-me",
       "permanent": true
     }
